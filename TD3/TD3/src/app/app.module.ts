@@ -7,20 +7,40 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LessonEditFormComponent } from './lesson-edit-form/lesson-edit-form.component';
 import { LessonSearchPageComponent } from './lesson-search-page/lesson-search-page.component';
 import { MenuNavBarComponent } from './menu-nav-bar/menu-nav-bar.component';
+import {FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { LessonListPageComponent } from './lesson-list-page/lesson-list-page.component';
+import { LessonDetailPageComponent } from './lesson-detail-page/lesson-detail-page.component';
+import { TestPage1Component } from './test-page1/test-page1.component';
+import { FormsModule } from "@angular/forms";
+import { CumberDisplayComponent } from './cumber-display/cumber-display.component';
+import { NumberStepsComponent } from './number-steps/number-steps.component';
 @NgModule({
   declarations: [
     AppComponent,
     LessonEditFormComponent,
     LessonSearchPageComponent,
-    MenuNavBarComponent
+    MenuNavBarComponent,
+    LessonListPageComponent,
+    LessonDetailPageComponent,
+    TestPage1Component,
+    CumberDisplayComponent,
+    NumberStepsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(faIconLibrary: FaIconLibrary) {
+    faIconLibrary.addIconPacks(fas, far);
+  }
+}

@@ -1,8 +1,21 @@
 This is your main app page
 It should contain header, menu,
-
-<router-outlet></router-outlet>
-<app-menu-nav-bar></app-menu-nav-bar>
-<app-lesson-edit-form></app-lesson-edit-form>
-<app-lesson-search-page></app-lesson-search-page>
 And then footer
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <ul class="navbar-nav mr-auto">
+    <li ngbDropdown class="nav-item">
+      <a ngbDropdownToggle id="navbarMenu2" class="nav-link dropdowntoggle" role="button">
+        Menu2
+      </a>
+      <div ngbDropdownMenu aria-labelledby="navbarMenu2" class="dropdownmenu">
+        <a class="dropdown-item" routerLink="/lesson-edit-form">Lesson Edit
+          Form...</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<a class="dropdown-item" routerLink="/test-page1">Test Page1</a>
+<router-outlet></router-outlet>
+
