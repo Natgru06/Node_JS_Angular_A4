@@ -1,0 +1,58 @@
+<script>
+var x ="Ceci est un message";
+const someComplexVariable = [1,2,3];
+const myObj= { field1: 1, field2: 2};
+console.log(x,someComplexVariable);
+</script>
+<p>Please enter your name : </p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<script>
+
+function myFunction() {
+  let enteredText = document.getElementById("numb").value;
+  if (enteredText == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  alert('Your input : '+ enteredText);
+}
+</script>
+
+<p id = "dateText"></p>
+
+<script> 
+function Time_Set() {
+   document.getElementById("dateText").innerHTML = Date();
+}
+setInterval(Time_Set, 5000);
+</script>
+
+
+<button type="button" onclick="Time_Set_2()">Last Click</button>
+<p id ="lastClick"></p>
+<script>
+function Time_Set_2() {
+   document.getElementById("lastClick").innerHTML = Date();
+}
+</script>
+
+
+<input id= "input">
+<button type ="button" onclick="Add()">Press</button>
+<ul id="list"></ul>
+
+<script> 
+function Add(){
+	var list =document.getElementById("list")
+	var valeur= document.getElementById("input").value;
+	var entry = document.createElement('li');
+	entry.appendChild(document.createTextNode(valeur));
+	list.appendChild(entry);
+}
+ </script>
+
+<input id="input2">
