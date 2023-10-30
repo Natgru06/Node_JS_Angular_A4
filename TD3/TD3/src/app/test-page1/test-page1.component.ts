@@ -13,5 +13,18 @@ export class TestPage1Component {
   onInputChanged($event: Event) {
     this.numberValue = +(<HTMLInputElement> $event.target).value;
   }
+  onDecr10($event: number) {
+    this.numberValue -= 10;
+  }
+  onDecr1($event: number) {
+    this.numberValue -= 1;
+  }
+  onIncr1($event: number) {
+    this.numberValue += 1;
+  }
+  onIncr10($event: number) {
+    this.numberValue += 10;
+  }
+
 
 }

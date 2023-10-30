@@ -14,9 +14,10 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { LessonListPageComponent } from './lesson-list-page/lesson-list-page.component';
 import { LessonDetailPageComponent } from './lesson-detail-page/lesson-detail-page.component';
 import { TestPage1Component } from './test-page1/test-page1.component';
-import { FormsModule } from "@angular/forms";
-import { CumberDisplayComponent } from './cumber-display/cumber-display.component';
+import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { NumberStepsComponent } from './number-steps/number-steps.component';
+import { NumberEditComponent } from './number-edit/number-edit.component';
+import { NumberDisplayComponent } from './number-display/number-display.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,14 +27,16 @@ import { NumberStepsComponent } from './number-steps/number-steps.component';
     LessonListPageComponent,
     LessonDetailPageComponent,
     TestPage1Component,
-    CumberDisplayComponent,
-    NumberStepsComponent
+    NumberStepsComponent,
+    NumberEditComponent,
+    NumberDisplayComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     FontAwesomeModule
   ],
   providers: [],
